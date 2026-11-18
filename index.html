@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A1 | Happy Teachers' Day</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Be+Vietnam+Pro:wght@300;400;600&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: white;
+  background:
+    radial-gradient(circle at 20% 20%, #164e83, transparent 40%),
+    radial-gradient(circle at 80% 80%, #173d6b, transparent 40%),
+    #071629;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(#ffffffaa 1px, transparent 1px);
+  background-size: 35px 35px;
+  opacity: .25;
+}
+
+.card {
+  width: min(90%, 650px);
+  padding: 45px 30px;
+  margin: 35px 0;
+  text-align: center;
+  border: 1px solid #c6a86b88;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #102b49ee, #091b30f5);
+  box-shadow: 0 0 55px #4b9bd533;
+  animation: appear 1.2s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.line {
+  width: 75px;
+  height: 2px;
+  background: #d8b878;
+  margin: 18px auto;
+}
+
+.small {
+  color: #d8b878;
+  letter-spacing: 4px;
+  font-size: 11px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #f3d89e;
+  font-size: clamp(35px, 8vw, 53px);
+  margin: 18px 0;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #f3d89e;
+  font-size: 25px;
+}
+
+.message {
+  font-size: 14px;
+  line-height: 2;
+  color: #e0eaf5;
+  text-align: justify;
+  margin-top: 28px;
+}
+
+.poem {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  line-height: 2;
+  color: #f3d89e;
+  font-size: 15px;
+}
+
+.signature {
+  margin-top: 35px;
+  color: #f3d89e;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+}
+
+button {
+  margin-top: 28px;
+  border: 1px solid #d8b878;
+  background: transparent;
+  color: #f3d89e;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: .3s;
+}
+
+button:hover {
+  background: #d8b878;
+  color: #071629;
+}
+
+.hidden { display: none; }
+
+#letter {
+  animation: appear 1s ease;
+}
+
+.footer {
+  color: #8299ae;
+  font-size: 10px;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<main class="card">
+  <div class="small">20 · 11 · 2026</div>
+  <div class="line"></div>
+
+  <div style="font-size:40px">✦</div>
+  <h1>Happy<br>Teachers' Day</h1>
+  <p style="color:#b8cde0; letter-spacing:2px">
+    A LITTLE THANK YOU, A BIG APPRECIATION
+  </p>
+
+  <div class="line"></div>
+
+  <h2>Gửi thầy kính mến!</h2>
+
+  <p class="poem">
+    Có những bài học chẳng nằm trên trang giấy,<br>
+    Mà theo chúng em suốt những tháng năm dài.<br>
+    Cảm ơn thầy đã tận tâm truyền dạy,<br>
+    Chắp cánh ước mơ qua từng bài học hôm nay.
+  </p>
+
+  <button onclick="openLetter()">MỞ LỜI TRI ÂN ✧</button>
+
+  <section id="letter" class="hidden">
+    <div class="line"></div>
+
+    <div class="message">
+      Nhân ngày Nhà giáo Việt Nam 20/11, tập thể lớp A1
+      xin gửi đến thầy những lời chúc tốt đẹp và chân thành nhất.
+
+      <br><br>
+      Cảm ơn thầy vì đã luôn tận tâm truyền đạt kiến thức,
+      kiên nhẫn đồng hành và mang đến cho chúng em những
+      giờ học bổ ích. Những bài học của thầy không chỉ
+      giúp chúng em mở rộng tri thức mà còn khơi gợi
+      niềm say mê khám phá và sáng tạo.
+
+      <br><br>
+      Kính chúc thầy luôn mạnh khỏe, hạnh phúc, thành công
+      và mãi giữ được ngọn lửa nhiệt huyết với nghề.
+      Mong rằng mỗi ngày đến trường của thầy đều là
+      một ngày tràn ngập niềm vui!
+    </div>
+
+    <div class="signature">
+      With love,<br>
+      Tập thể lớp A1 ♡
+    </div>
+  </section>
+
+  <div class="footer">MADE WITH LOVE · A1 CLASS</div>
+</main>
+
+<script>
+function openLetter() {
+  document.getElementById('letter').classList.remove('hidden');
+  document.querySelector('button').style.display = 'none';
+}
+</script>
+</body>
+</html>
